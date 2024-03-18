@@ -48,3 +48,12 @@ logging:
         type:
           descriptor:
             sql: trace
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: prometheus, health, info # 외부에 노출할 엔드포인트 지정
+  metrics:
+    tags:
+      application: ${spring.application.name} # 메트릭 데이터에 태그 추가

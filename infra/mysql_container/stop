@@ -3,3 +3,5 @@
 docker stop mysql
 docker stop redis
 docker stop sonarqube
+docker stop prometheus
+docker stop grafana

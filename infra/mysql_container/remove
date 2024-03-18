@@ -11,3 +11,9 @@ docker rmi redis:latest
 
 docker rm sonarqube
 docker rmi sonarqube:4.3.1.3277
+
+docker rm prometheus
+docker rmi prom/prometheus:v2.37.6
+
+docker rm grafana
+docker rmi grafana/grafana:9.4.7

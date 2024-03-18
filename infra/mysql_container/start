@@ -3,3 +3,5 @@
 docker start mysql
 docker start redis
 docker start sonarqube
+docker start prometheus
+docker start grafana
