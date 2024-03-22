@@ -15,7 +15,7 @@ services:
     image: mysql
     container_name: mysql
     ports:
-      - 3306:3306
+      - "3306:3306"
     volumes:
       - data:/var/lib/mysql
       - config:/etc/mysql/conf.d
@@ -30,7 +30,7 @@ services:
     image: redis
     container_name: redis
     ports:
-      - 6379:6379
+      - "6379:6379"
     volumes:
       - data:/data
     restart: always
@@ -40,7 +40,7 @@ services:
     image: sonarqube
     container_name: sonarqube
     ports:
-      - 9000:9000
+      - "9000:9000"
     platform: linux/arm64/v8
     restart: always
 
@@ -48,9 +48,9 @@ services:
     image: prom/prometheus:v2.37.6
     container_name: prometheus
     ports:
-      - 9090:9090
+      - "9090:9090"
     volumes:
-      - ./../../src/main/resources/prometheus.yml:/etc/prometheus/prometheus.yml
+      - :/Users/User/IdeaProjects/BE-04-Daangn-Market/src/main/resources/prometheus.yml:/etc/prometheus/prometheus.yml
     command:
       - '--config.file=/etc/prometheus/prometheus.yml'
     platform: linux/arm64/v8
@@ -60,7 +60,7 @@ services:
     image: grafana/grafana:9.4.7
     container_name: grafana
     ports:
-      - 3000:3000
+      - "3000:3000"
     volumes:
       - ./grafana/volume:/var/lib/grafana
     platform: linux/arm64/v8

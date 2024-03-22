@@ -9,6 +9,7 @@ scrape_configs:
 
   - job_name: "springboot"
     metrics_path: "/actuator/prometheus" # metric 정보를 가져올 경로
+    scheme: 'http'
     static_configs:
       - targets:
-          - "host.docker.internal:8082"
+        - "host.docker.internal:8080" # 요청을 보낼 host 정보
