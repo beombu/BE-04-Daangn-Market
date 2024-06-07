@@ -48,3 +48,9 @@ logging:
         type:
           descriptor:
             sql: trace
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: prometheus # 외부에 노출할 엔드포인트 지정

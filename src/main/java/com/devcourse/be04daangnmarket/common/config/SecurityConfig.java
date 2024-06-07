@@ -28,6 +28,7 @@ public class SecurityConfig {
         return http
                 .authorizeHttpRequests(authorizeRequests ->
                         authorizeRequests
+                                .requestMatchers("/**").permitAll()
                                 .requestMatchers("/api/v1/sign-up").permitAll()
                                 .requestMatchers("/api/v1/login").permitAll()
                                 .requestMatchers(HttpMethod.GET, "/api/v1/members/**").permitAll()
